@@ -11,7 +11,7 @@ This is a customized fork of [ComfyUI](https://github.com/comfyanonymous/ComfyUI
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/CVU-Retirement-Home/ComfyUI-updated.git
-cd your-comfyui-fork
+cd ComfyUI-updated
 ```
 
 ### 2. Create and Activate Python 3.12 Virtual Environment
@@ -65,7 +65,7 @@ python deepfake.py
 
 **Added Files and Directories:**
 - `deepfake.py`
-- `models/upscale_models/`
+- `models/upscale_models/RealESRGAN_x8.pth`
 
 ---
 
