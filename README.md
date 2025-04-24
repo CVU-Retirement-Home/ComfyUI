@@ -45,6 +45,7 @@ python deepfake.py
 ## Links to models and what not
 
 [Stable diffusion 3 medium](https://civitai.com/models/497255?modelVersionId=552771)
+[Real-ESRGAN upscale model](https://huggingface.co/ai-forever/Real-ESRGAN)
 
 
 ---
@@ -65,7 +66,6 @@ python deepfake.py
 
 **Added Files and Directories:**
 - `deepfake.py`
-- `models/upscale_models/RealESRGAN_x8.pth`
 
 ---
 
