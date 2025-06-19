@@ -43,18 +43,25 @@ python deepfake.py
 ---
 
 ## Links to models and what not
+All models are downloaded from [huggingface](https://huggingface.co/models?other=deepfake) or [civitai](https://civitai.com/)
 
-[Stable diffusion 3 medium](https://civitai.com/models/497255?modelVersionId=552771)
-[Real-ESRGAN upscale model](https://huggingface.co/ai-forever/Real-ESRGAN)
+Sample Model used for deepfake generation
+
+- [Stable diffusion 3 medium](https://civitai.com/models/497255?modelVersionId=552771)
+- [Real-ESRGAN upscale model](https://huggingface.co/ai-forever/Real-ESRGAN)
 
 
 ---
+## Automation of workflow
+Repo to convert comfytUI json into python scripts https://github.com/pydn/ComfyUI-to-Python-Extension
+
+ follow the git repo instructions to convert json worflows into python scripts then follow the format of existing [folders](workflows) in  for automation of deepefakes
 
 ## ⚠️ Notes
 
 - Ensure all model folders exist before running.
-- You must manually set the desired output directory inside the script.
-- The output directory will auto clear itself on run (save it to another folder)
+- You must manually set the desired output directory,parameters and configs inside the script.
+- The output directory will auto clear itself on run (use a different folder to save the outputs)
 
 ---
 
@@ -66,6 +73,11 @@ python deepfake.py
 
 **Added Files and Directories:**
 - `deepfake.py`
+- `workflow_json`
+    - the comfyUI json files for various workflows to test if output is valid
+- `workflows`
+    - folder that contains all the automation of the images using various workflows
+
 
 ---
 
