@@ -8,36 +8,47 @@ This is a customized fork of [ComfyUI](https://github.com/comfyanonymous/ComfyUI
 
 ## 🔧 Setup Instructions
 
-### 1. Clone the Repository
+### 1. Download the portable version
+[ComfyUI Portable](https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z)
+
 ```bash
-git clone https://github.com/CVU-Retirement-Home/ComfyUI-updated.git
-cd ComfyUI-updated
+cd .\ComfyUI_windows_portable
+```
+Delete the ComfyUI folder
+
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/CVU-Retirement-Home/ComfyUI.git
+cd ComfyUI
 ```
 
-### 2. Create and Activate Python 3.12 Virtual Environment
+### 3. Create and Activate Python 3.12 Virtual Environment
+Download UV if not installed yet
 ```bash
-python3.12 -m venv venv
-source venv/bin/activate    # On Windows: venv\Scripts\activate
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+```bash
+uv venv # to create the venv (python 3.12)
+venv\scripts\activate
 ```
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt --torch-backend=auto
 ```
 
-install cuda from https://pytorch.org/get-started/locally/
-
-### 4. Place Required Model Files
+### 5. Place Required Model Files
 - Model checkpoints → `./models/checkpoints/`
 - Lora models → `./models/loras/`
 - Upscale models → `./models/upscale_models/`
 
-### 5. Configuration
+### 6. Configuration
 Edit the `deepfake.py` script to change the **output folder path** according to your setup.
 
-### 6. Run the Application
+### 7. Run the Application
 ```bash
-python deepfake.py
+uv run deepfake.py
 ```
 
 ---
@@ -49,6 +60,7 @@ Sample Model used for deepfake generation
 
 - [Stable diffusion 3 medium](https://civitai.com/models/497255?modelVersionId=552771)
 - [Real-ESRGAN upscale model](https://huggingface.co/ai-forever/Real-ESRGAN)
+- [realvisxlV40_v40Bakedvae checkpoint](https://huggingface.co/frankjoshua/realvisxlV40_v40Bakedvae/tree/main)
 
 
 ---
