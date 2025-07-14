@@ -119,8 +119,8 @@ def main():
     neg_prompt = 'text, error, cropped, worst quality, low quality, duplicate, morbid, mutilated, out of frame, deformed, blurry, watermark, blurry grass, animated, cartoon, high contrast, high saturation, blurry leaves, blurry trees, incorrect number of fingers'
     pos_prompt = 'earthquake natural disaster aftermath of broken houses in a neighborhood in south east asian country'
     lora_name = "dizhen_optimizeV2.safetensors" #copy filename from \models\loras with extension
-    ckpt_path = "realisticVisionV60B1_v51HyperVAE.safetensors" #base model
-    output_folder = r'D:\SeeThrough\ComfyUI_windows_portable\ComfyUI\retirement_dataset_fake' #folder to save generate images to, defaults to output folder in root comfyui
+    ckpt_path = "realvisxlV40_v40Bakedvae.safetensors" #base model
+    output_folder = r'S:\Code\Deepfake\ComfyUI_windows_portable\ComfyUI\output2' #folder to save generate images to, defaults to output folder in root comfyui
     upscale_model = 'RealESRGAN_x8.pth'
     os.makedirs(output_folder,exist_ok=True)
     import_custom_nodes()

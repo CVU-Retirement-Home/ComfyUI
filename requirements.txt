@@ -11,6 +11,7 @@ scipy
 tqdm
 psutil
 black 
+comfyui-frontend-package
 
 #non essential dependencies:
 kornia>=0.7.1
