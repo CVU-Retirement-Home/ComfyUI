@@ -123,12 +123,9 @@ def main():
     model_settings_prompt =  "natural shadow and lighting, 8k, uhd"
  #'masterpiece, 4k, ray tracing, intricate details, highly-detailed, hyper-realistic, 8k RAW Editorial Photo,film grain ISO 200 faded film, 35mm photo, grainy, vignette, vintage, Kodachrome, Lomography, stained, highly detailed, found footage'
     lora_name = "epiCRealismHelper.safetensors" #copy filename from \models\loras with extension
-    ckpt_path = "realvisxlV40_v40LightningBakedvae.safetensors" #base model
-    output_folder = r'D:\SeeThrough\ComfyUI_windows_portable\ComfyUI\retirement_dataset_fake_realistic6_05022025_3' #folder to save generate images to, defaults to output folder in root comfyui
-    image_template_path = [r"D:\SCVU\deepfake_dataset\disaster_images\hurricane_destruction\keep\hurricane_destruction_214.jpg",r"D:\SCVU\deepfake_dataset\disaster_images\landslide_photo\keep\landslide_photo_039.jpg",r"D:\SCVU\deepfake_dataset\disaster_images\landslide_photo\keep\landslide_photo_116.jpg",
-    r"D:\SCVU\deepfake_dataset\disaster_images\landslide_photo\keep\landslide_photo_118.jpg",
-    r"D:\SCVU\deepfake_dataset\disaster_images\hurricane_destruction\keep\hurricane_destruction_297.jpg",
-    r"D:\SCVU\deepfake_dataset\disaster_images\natural_disaster_scene\keep\natural_disaster_scene_599.jpg",r"D:\SCVU\deepfake_dataset\disaster_images\natural_disaster_scene\keep\natural_disaster_scene_255.jpg",r"D:\SCVU\deepfake_dataset\disaster_images\landslide_photo\keep\landslide_photo_261.jpg",r"D:\SCVU\deepfake_dataset\disaster_images\natural_disaster_scene\keep\natural_disaster_scene_500.jpg"]
+    ckpt_path = "realvisxlV40_v40Bakedvae.safetensors" #base model
+    output_folder = r"S:\Code\Deepfake\ComfyUI_windows_portable\ComfyUI\output3" #folder to save generate images to, defaults to output folder in root comfyui
+    image_template_path = [r"S:\Code\Deepfake\ComfyUI_windows_portable\ComfyUI\input\REAL\791781551885344768_0.jpg", r"S:\Code\Deepfake\ComfyUI_windows_portable\ComfyUI\input\REAL\911869898703474689_0.jpg"]
     upscale_model = '4x_NMKD-Superscale-SP_178000_G.pth'
     filename_template ='img2img_refiner'
     control_net_name = "control-lora-canny-rank256.safetensors"

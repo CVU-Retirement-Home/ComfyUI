@@ -24,6 +24,7 @@ import comfy.sample
 import comfy.sd
 import comfy.utils
 import comfy.controlnet
+from comfy_extras.nodes_canny import Canny
 from comfy_extras.nodes_upscale_model import ImageUpscaleWithModel,UpscaleModelLoader
 
 import comfy.clip_vision
@@ -1400,7 +1401,8 @@ class SaveImage:
 
     CATEGORY = "image"
 
-    def save_images(self, images, count,filename_prefix="ComfyUI", prompt=None, extra_pnginfo=None,output_folder = ""):
+    def save_images(self, images, count='0',filename_prefix="ComfyUI", prompt=None, extra_pnginfo=None,output_folder = ""):
+        
         filename_prefix += self.prefix_append
         full_output_folder, filename, counter, subfolder, filename_prefix = folder_paths.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
         results = list()
@@ -1418,6 +1420,7 @@ class SaveImage:
 
             filename_with_batch_num = filename.replace("%batch_num%", str(batch_number))
             file = f"{filename_with_batch_num}_{count}_.png"
+            print('SAVING',output_folder,file)
             if output_folder:
             # folder_to_save_to = os.path.join(full_output_folder,'deepfake_retiremenmt')
             # os.makedirs(folder_to_save_to,exist_ok=True)
@@ -1866,6 +1869,7 @@ NODE_CLASS_MAPPINGS = {
     "ConditioningZeroOut": ConditioningZeroOut,
     "ConditioningSetTimestepRange": ConditioningSetTimestepRange,
     "LoraLoaderModelOnly": LoraLoaderModelOnly,
+    'Canny' : Canny
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
